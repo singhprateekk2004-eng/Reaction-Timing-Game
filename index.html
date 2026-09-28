@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Reaction Battle</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- =========================
+             START SCREEN
+        ========================== -->
+
+        <section id="startScreen" class="screen active">
+
+            <div class="logo">
+                ⚡
+            </div>
+
+            <h1>Reaction <span>Battle</span></h1>
+
+            <p class="subtitle">
+                How fast can you react?
+            </p>
+
+            <div class="instructions">
+
+                <div class="instruction">
+                    <span>1</span>
+                    <p>Wait for the target</p>
+                </div>
+
+                <div class="instruction">
+                    <span>2</span>
+                    <p>Click it as fast as you can</p>
+                </div>
+
+                <div class="instruction">
+                    <span>3</span>
+                    <p>Complete 5 rounds</p>
+                </div>
+
+            </div>
+
+            <button id="startButton" class="primary-button">
+                Start Game
+            </button>
+
+            <p class="small-text">
+                Test your reaction speed in 5 rounds
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             GAME SCREEN
+        ========================== -->
+
+        <section id="gameScreen" class="screen">
+
+            <header class="game-header">
+
+                <div class="brand">
+                    ⚡ Reaction Battle
+                </div>
+
+                <div class="round-info">
+                    Round
+                    <strong id="roundNumber">1</strong>
+                    / 5
+                </div>
+
+            </header>
+
+
+            <!-- SCORE -->
+            <div class="score-panel">
+
+                <div class="score-card">
+                    <span>Score</span>
+                    <strong id="score">0</strong>
+                </div>
+
+                <div class="score-card">
+                    <span>Best</span>
+                    <strong id="bestTime">—</strong>
+                </div>
+
+                <div class="score-card">
+                    <span>Average</span>
+                    <strong id="averageTime">—</strong>
+                </div>
+
+            </div>
+
+
+            <!-- GAME AREA -->
+            <main id="gameArea" class="game-area">
+
+                <div id="gameMessage" class="game-message">
+                    Press Start
+                </div>
+
+                <div id="countdown" class="countdown hidden">
+                    3
+                </div>
+
+                <button
+                    id="target"
+                    class="target hidden"
+                    aria-label="Reaction target"
+                >
+                    <span>CLICK</span>
+                </button>
+
+            </main>
+
+
+            <!-- ROUND RESULT -->
+
+            <div id="roundResult" class="round-result hidden">
+
+                <div id="resultIcon" class="result-icon">
+                    ⚡
+                </div>
+
+                <h2 id="resultTitle">
+                    Great!
+                </h2>
+
+                <p id="resultText">
+                    Your reaction time was 250 ms
+                </p>
+
+                <button
+                    id="nextRoundButton"
+                    class="primary-button"
+                >
+                    Next Round
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FINAL SCREEN
+        ========================== -->
+
+        <section id="resultScreen" class="screen">
+
+            <div class="trophy">
+                🏆
+            </div>
+
+            <p class="result-label">
+                GAME COMPLETE
+            </p>
+
+            <h1>
+                Reaction <span>Master!</span>
+            </h1>
+
+            <p class="subtitle">
+                Here is your final performance
+            </p>
+
+
+            <div class="final-stats">
+
+                <div class="final-card">
+
+                    <span>Final Score</span>
+
+                    <strong id="finalScore">
+                        0 / 5
+                    </strong>
+
+                </div>
+
+
+                <div class="final-card">
+
+                    <span>Average Time</span>
+
+                    <strong id="finalAverage">
+                        0 ms
+                    </strong>
+
+                </div>
+
+
+                <div class="final-card">
+
+                    <span>Best Time</span>
+
+                    <strong id="finalBest">
+                        0 ms
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="performance-message">
+
+                <h3 id="performanceTitle">
+                    Nice Work!
+                </h3>
+
+                <p id="performanceText">
+                    Your reaction speed was impressive.
+                </p>
+
+            </div>
+
+
+            <div class="round-history">
+
+                <h3>Round Results</h3>
+
+                <div id="historyList"></div>
+
+            </div>
+
+
+            <button
+                id="playAgainButton"
+                class="primary-button"
+            >
+                Play Again
+            </button>
+
+        </section>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
